@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="70576" started-at="2019-12-12T09:19:50 CET" finished-at="2019-12-12T09:21:01 CET">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="70576" started-at="2019-12-12T09:19:50 CET" finished-at="2019-12-12T09:21:01 CET">
+      <class name="tests.ExtrasTest">
+        <test-method status="PASS" signature="setup()[pri:0, instance:tests.ExtrasTest@627551fb]" name="setup" is-config="true" duration-ms="16239" started-at="2019-12-12T09:19:50 CET" finished-at="2019-12-12T09:20:06 CET">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="basicLogin()[pri:0, instance:tests.ExtrasTest@627551fb]" name="basicLogin" is-config="true" duration-ms="17386" started-at="2019-12-12T09:20:06 CET" depends-on-methods="tests.BasicTest.setup" finished-at="2019-12-12T09:20:24 CET">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- basicLogin -->
+        <test-method status="PASS" signature="Extras()[pri:0, instance:tests.ExtrasTest@627551fb]" name="Extras" duration-ms="36741" started-at="2019-12-12T09:20:24 CET" finished-at="2019-12-12T09:21:01 CET">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Extras -->
+        <test-method status="PASS" signature="quit()[pri:0, instance:tests.ExtrasTest@627551fb]" name="quit" is-config="true" duration-ms="0" started-at="2019-12-12T09:21:01 CET" finished-at="2019-12-12T09:21:01 CET">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quit -->
+      </class> <!-- tests.ExtrasTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
