@@ -48,8 +48,21 @@ public class CarsTest extends BasicTest{
 
 		TravelsCarsPage tcp = new TravelsCarsPage(driver);
 		tcp.isOrdersMoreThen50();
-		Assert.assertTrue(tcp.isOrdersMoreThen50());
+		Assert.assertFalse(tcp.isOrdersMoreThen50());
 
 	}
-
+	@Test(priority = 3)
+	public void AddCar() throws InterruptedException {
+		driver.get("https://www.phptravels.net/admin/cars");
+		Thread.sleep(2000);
+		TravelsCarsPage tcp = new TravelsCarsPage(driver);
+		tcp.clickUpload();
+		Thread.sleep(2000);
+	    tcp.clickOnAdd();
+		Thread.sleep(2000);
+	    tcp.clickOnUpload();
+		
+	}		
 }
+
+

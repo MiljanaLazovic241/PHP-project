@@ -1,19 +1,25 @@
 package pages;
 
-import java.util.ArrayList;
+
+import java.io.File;
 import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-public class TravelsCarsPage extends BasicPage{
+
+public class TravelsCarsPage extends BasicPage {
 
 	private By cars1 = By.cssSelector("#social-sidebar-menu > li:nth-child(10) > a");
 	private By cars2 = By.cssSelector("#Cars > li:nth-child(1) > a");
 	private By cars = By.cssSelector(".xcrud-row");
 	private List<WebElement> listCars = driver.findElements(this.cars);
 	private By orders = By.cssSelector(".form-control.input-sm");
+	private By uploadPhoto = By
+			.xpath("//*[@id=\"content\"]/div[2]/div[2]/div/div/div[1]/div[2]/table/tbody/tr[1]/td[9]/a");
+	private By addPhoto = By.cssSelector("a.btn.btn-success");
+	private By photo = By.cssSelector("input.dz-hidden-input");
 
 	public TravelsCarsPage(WebDriver driver) {
 		super(driver);
@@ -59,6 +65,19 @@ public class TravelsCarsPage extends BasicPage{
 			orders = true;
 		}
 		return orders;
+	}
+
+	public void clickUpload() {
+		this.driver.findElement(this.uploadPhoto).click();
+	}
+
+	public void clickOnAdd() {
+		this.driver.findElement(this.addPhoto).click();
+	}
+
+	public void clickOnUpload() {
+		WebElement uploadPicture = driver.findElement(By.cssSelector("input.dz-hidden-input"));
+		uploadPicture.sendKeys("C:\\Users\\Vuk\\Desktop\\slika2.jpg");
 	}
 
 }
